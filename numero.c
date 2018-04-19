@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main(){
 	int num;
-	printf("Digite um número");
+	printf("Digite um número: ");
 	scanf("%d", &num);
 	if(num%2==0){
 		if(num<100){
@@ -19,5 +19,6 @@ int main(){
 			printf("Impar e maior ou igual a 100");
 		}
 	}
+    printf("\n");
 return 0;
 }
