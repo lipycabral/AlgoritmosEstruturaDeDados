@@ -53,21 +53,23 @@ int retornaMenor(int vetor[], int n){
 return menor;
 }
 main(){
-    int n;
+    int n, i;
     printf("Digite o valor de fibbonnaci: ");
     scanf("%d", &n);
-    //fibbonnaci(n);
-    printf("\n---------------------------\n");
-    for(int i = 0 ; i < 10 ; i++)
+    printf("---------------------------\n");
+    for(i = 0 ; fibonacciTeste(i)<n ; i++)
         printf("%d ",fibonacciTeste(i));
+    printf("%d ",fibonacciTeste(i));
     printf("\n---------------------------\n");
-    printf("\n---------------------------\n");
+    /*printf("\n---------------------------\n");
     for(int i = 0 ; i < 10 ; i++)
         printf("%d ",fatorial(i));
+    
     printf("\n---------------------------\n");
-    //int vetor[] = {10,9,8,7,6,5,4,3,2,1};
-    //printf("Maior número do vetor %d", retornaMaior(vetor, 10));
-    //printf("\n---------------------------\n");
-    //printf("Menor número do vetor %d", retornaMenor(vetor, 10));
-    //printf("\n---------------------------\n");
+    int vetor[] = {10,9,8,7,6,5,4,3,2,1};
+    printf("Maior número do vetor %d", retornaMaior(vetor, 10));
+    printf("\n---------------------------\n");
+    printf("Menor número do vetor %d", retornaMenor(vetor, 10));
+    printf("\n---------------------------\n");
+    */
 }
