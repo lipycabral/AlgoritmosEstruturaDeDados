@@ -16,8 +16,9 @@ int produtoInterno(int v0[], int v1[], int tam){
 int checaVetor(int v0[], int v1[], int tam){
     int valor = 0;
     for(int i =0; i<tam; i++)
-        if(v0[i]==v1[i])
-            valor++;
+        for(int j =0 ; j<tam ; j++)
+            if(v0[i]==v1[j])
+                valor++;
     return valor;
 }
 int main(){
