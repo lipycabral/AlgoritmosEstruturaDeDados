@@ -57,10 +57,12 @@ main(){
     printf("Digite o valor de fibbonnaci: ");
     scanf("%d", &n);
     printf("---------------------------\n");
-    for(i = 0 ; fibonacciTeste(i)<n ; i++)
+    fibbonnaci(n);
+    /*for(i = 0 ; fibonacciTeste(i)<n ; i++)
         printf("%d ",fibonacciTeste(i));
     printf("%d ",fibonacciTeste(i));
     printf("\n---------------------------\n");
+    */
     /*printf("\n---------------------------\n");
     for(int i = 0 ; i < 10 ; i++)
         printf("%d ",fatorial(i));
