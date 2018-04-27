@@ -2,32 +2,42 @@
 #include <stdlib.h>
 #include <string.h>
 int main(){
-	char string[50], stringInvertida[50];
-	int tam, j = 0, espaco = 0;
+	char string[50], stringInversa[50];
+	int i,j, fim = 0, real = 0;
 	printf("Digite: ");
-	fgets(string, 50, stdin);	 
-	tam = strlen(string)-2;
-	for(int i = tam ; i >= 0 ; i--){
-		stringInvertida[j] = string[i];
-		if(string[i] == ' ')
-			espaco++;
+	fgets(string, 50, stdin);
+
+	while(string[fim]!='\0' && string[fim]!='\n')
+		fim++;
+
+	i = fim - 1;
+	j = 0;
+	while(j<(fim)){
+		stringInversa[j] = string[i];
+		i--;
 		j++;
 	}
-	j = 0;
-	char novaS[tam-espaco], novaI[tam-espaco];
-	for(int i = 0 ; i < strlen(string)-1 ; i++){
-		if((string[i] != ' ') || (string[i] != '\n')){
-			novaS[j] = string[i];
-			j++;
+	stringInversa[fim] = '\0';
+	int len = strlen(string);
+	for (int i = 0, posicao = 0; i < len; i++, posicao++) {
+		if (string[posicao] == ' ') {
+		    posicao++;
 		}
-	}
-	j = 0;
-	for(int i = strlen(novaS)-1; i >= 0 ; i--){
-		if(novaS[i] != '\n'){
-			novaI[j] = novaS[i];
-			j++;
-		}		
-	}
-	printf("String sem espaco: %sString invertida sem espaco: %s\n espaços %d", novaS, novaI, espaco);
-	return 0;
+		string[i] = string[posicao];
+    	}
+	len = strlen(stringInversa);
+	for (int i = 0, posicao = 0; i < len; i++, posicao++) {
+		if (stringInversa[posicao] == ' ') {
+		    posicao++;
+		}
+		stringInversa[i] = stringInversa[posicao];
+    	}
+	len = strlen(stringInversa);
+	for (int i = 0; i < len; i++) {
+		if (stringInversa[i]!=string[i]) {
+			real = 1;
+		}
+    	}
+	if(real == 0){printf("Palindromo\n");}
+	else{printf("Nao palindromo\n");}
 }
