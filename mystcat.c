@@ -10,6 +10,6 @@ int main(){
 	char sres[strlen(s1)+strlen(s2)];
 	char* str;
 	str = mystrcat(s1,s2,sres);
-	printf("Minha string alterada: %s",str);
+	printf("Strings concatenadas: %s",str);
 	return 0;
 }
